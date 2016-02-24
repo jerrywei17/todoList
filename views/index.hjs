@@ -3,17 +3,8 @@
   <head>
     <title>{{ title }}</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <script type="text/javascript">
-    function testAjax(){
-        var a = document.getElementById("testAjax");
-            a.addEventListener('click',function(){
-            alert('testAjax');
-        });
-    }
-    
-    </script>
-  </head>
-  <body onload="testAjax()">
+   </head>
+  <body>
     <h1>{{ title }}</h1>
     <form name="addlist" action="/addlist" method="post">
       <input type="text" name="content" />
@@ -27,6 +18,5 @@
 	    {{/todos}}
 	    </ul>
 
-      <input id="testAjax" type="button" value="ajax">
   </body>
 </html>
