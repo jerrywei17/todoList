@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>{{ title }}</h1>
+    <form name="addlist" action="/addlist" method="post">
+      <input type="text" name="content" />
+      <input type="submit" value="add list">
+    </form>
+		<ul>
+		{{#compared}}
+		    <li>{{content}}
+		    	<span><a href="/delete/{{_id}}" title="Delete this todo item"> Delete</a></span>
+		    </li>
+	    {{/compared}}
+	    </ul>
+  </body>
+</html>

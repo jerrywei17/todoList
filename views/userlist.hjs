@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Todo List</h1>
+    <ul>
+      {{#todos}}
+      <li>{{todo.content}}</li>
+      <span>
+     	<a href="/destroy/{{todo._id}}" title="Delete this todo item">Delete</a>
+      </span>
+      {{/todos}}
+    </ul>
+  </body>
+</html>
